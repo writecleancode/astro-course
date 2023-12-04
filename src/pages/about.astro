@@ -1,0 +1,16 @@
+---
+// component imports
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title='My Astro Blog' description='My musings about the Astro framework'>
+	<p>Hi from <span>About</span></p>
+</MainLayout>
+
+<style lang="scss">
+	p {
+		span {
+			color: red;
+		}
+	}
+</style>
