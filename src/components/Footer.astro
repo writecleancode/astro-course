@@ -1,0 +1,12 @@
+---
+
+---
+
+<footer><small>Copyright &copy; <span id='copyright'></span> | All rights reserved</small></footer>
+
+<script>
+    const spanYearElement: HTMLSpanElement = document.querySelector('#copyright')!
+    const year: string = new Date().getFullYear().toString()
+
+    spanYearElement.textContent = year
+</script>
