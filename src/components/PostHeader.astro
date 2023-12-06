@@ -1,9 +1,11 @@
 ---
-const { category, title, author, date, image } = Astro.props;
+import { Image } from 'astro:assets';
 
 // utils imports
 import { slugify, formatDate } from '../js/utils';
-import { Image } from 'astro:assets';
+
+const { category, title, author, date, image } = Astro.props;
+
 ---
 
 <header>
