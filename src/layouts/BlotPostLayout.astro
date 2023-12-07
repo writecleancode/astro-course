@@ -1,5 +1,6 @@
 ---
 // component imports
+import CategoryCloud from '../components/CategoryCloud.astro';
 import PostHeader from '../components/PostHeader.astro';
 import MainLayout from './MainLayout.astro';
 
@@ -13,6 +14,11 @@ const { title, description, category, author, date, image } = frontmatter;
 		<div class='content'>
 			<slot />
 		</div>
-		<div class='sidebar'></div>
+		<div class='sidebar'>
+			<aside class='container' aria-label='Blog categories'>
+				<h2 class='h3'>Blog categories</h2>
+				<CategoryCloud />
+			</aside>
+		</div>
 	</div>
 </MainLayout>
