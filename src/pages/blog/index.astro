@@ -7,14 +7,14 @@ import PostCard from '../../components/PostCard.astro';
 import { formatBlogPosts } from '../../js/utils';
 
 const allPosts = await Astro.glob('./*.md');
-const formatedPosts = formatBlogPosts(allPosts);
+const formattedPosts = formatBlogPosts(allPosts);
 ---
 
 <MainLayout title='My Blog' description='My musings about the Astro framework'>
 	<section class='container' aria-label='New Blog Posts'>
 		<h1 class='h1'>New Blog Posts</h1>
 		<div class='post-container'>
-			{formatedPosts.map((post: any) => <PostCard frontmatter={post.frontmatter} url={post.url} tagType='h2' />)}
+			{formattedPosts.map((post: any) => <PostCard frontmatter={post.frontmatter} url={post.url} tagType='h2' />)}
 		</div>
 	</section>
 </MainLayout>
