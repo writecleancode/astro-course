@@ -6,8 +6,9 @@ import PostCard from '../components/PostCard.astro';
 
 // util imports
 import { formatBlogPosts } from '../js/utils';
+
 const allPosts = await Astro.glob('./blog/*.md');
-const formatedPosts = formatBlogPosts(allPosts, { limit: 3 });
+const formattedPosts = formatBlogPosts(allPosts, { limit: 3 });
 ---
 
 <MainLayout title='My Blog' description='My musings about the Astro framework'>
@@ -26,7 +27,7 @@ const formatedPosts = formatBlogPosts(allPosts, { limit: 3 });
 	<section class='container' aria-label='New Blog Posts'>
 		<h2 class='h1'>New Blog Posts</h2>
 		<div class='post-container'>
-			{formatedPosts.map((post: any) => <PostCard frontmatter={post.frontmatter} url={post.url} tagType='h3' />)}
+			{formattedPosts.map((post: any) => <PostCard frontmatter={post.frontmatter} url={post.url} tagType='h3' />)}
 		</div>
 	</section>
 </MainLayout>
